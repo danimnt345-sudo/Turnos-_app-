@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Turnos de Atención</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+</head>
+
+<body>
+
+<div class="contenedor">
+
+<h1>Turnos de Atención</h1>
+
+<div class="formulario">
+
+<input type="text" id="paciente" placeholder="Paciente">
+
+<input type="text" id="profesional" placeholder="Profesional">
+
+<input type="date" id="fecha">
+
+<select id="hora">
+<option value="">Seleccione Hora</option>
+</select>
+
+<button onclick="agregarTurno()">
+Agregar
+</button>
+
+</div>
+
+<table>
+
+<thead>
+
+<tr>
+<th>Paciente</th>
+<th>Profesional</th>
+<th>Fecha</th>
+<th>Hora Inicio</th>
+<th>Hora Fin</th>
+<th>Acciones</th>
+</tr>
+
+</thead>
+
+<tbody id="tabla"></tbody>
+
+</table>
+
+<button onclick="descargarPDF()">
+Descargar PDF
+</button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
